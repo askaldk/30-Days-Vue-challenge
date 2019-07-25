@@ -1,0 +1,52 @@
+<template>
+  <div id="app">
+    <renderComponent :message="message"></renderComponent>
+  </div>
+</template>
+
+<script>
+import renderComponent from './components/renderComponent';
+export default {
+  name: "app",
+  data() {
+    return {
+      message: "Greetings!"
+    };
+  },
+  components: {
+    renderComponent
+  }
+};
+</script>
+
+<style>
+html, body {
+  height: 100%;
+  padding-top: 10px;
+  background: #e6ecf1;
+}
+
+#app {
+  height: 100%;
+  max-width: 400px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+header span {
+  font-weight: 400;
+  padding-right: 5px;
+}
+
+header .button {
+  margin: 0 auto;
+}
+
+.render-card {
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
+</style>
